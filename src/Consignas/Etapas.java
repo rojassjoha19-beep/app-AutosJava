@@ -22,6 +22,11 @@
  * controladores de forma abstracta por medio de un ControllerLocator (basado en
  * Service Locator) - Recepción de solicitudes y parseo de las mismas
  * 
+ * 
+ * 
+ * 
+ * 
+ * 
  * Etapa 2:
  * 
  * - Toda solicitud dentro de una sesión debe tener una respuesta - El framework

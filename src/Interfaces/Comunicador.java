@@ -1,6 +1,8 @@
 package Interfaces;
 
 public interface Comunicador {
-    void Envia(String pregunta);
-    String Recibe();
-}
+	 public void Envia(String mensaje);
+
+	  public String Recibe();
+	}
+

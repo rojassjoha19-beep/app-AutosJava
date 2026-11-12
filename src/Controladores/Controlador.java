@@ -1,5 +1,9 @@
 package Controladores;
+import Parser.Mensaje;
 
-public class Controlador {
+public abstract class Controlador{
+	
+	public abstract String ProcesarMensaje(Mensaje mensajee);
 
 }
+
