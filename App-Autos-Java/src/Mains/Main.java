@@ -1,0 +1,27 @@
+package Mains;
+import Contenedores.ContenedorAutos;
+import Controladores.AutoControlador;
+import Parser.MensajeParser;
+import Comunicadores.ComunicadorConsola;
+import Sesiones.Sesion;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		ContenedorAutos contenedor = new ContenedorAutos();
+		AutoControlador controladorA = new AutoControlador(contenedor);
+		MensajeParser mensaje = new MensajeParser();
+		ComunicadorConsola comunicador = new ComunicadorConsola();
+		
+		Sesion sesionInicial = new Sesion(comunicador, controladorA, mensaje);
+		
+		sesionInicial.run();
+		
+		
+		
+	}
+
+}
