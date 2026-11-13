@@ -1,36 +1,54 @@
 package Contenedores;
-
 import java.util.ArrayList;
-import java.util.List;
-
 import Modelos.Auto;
 
 public class ContenedorAutos {
 
-    //tengo que tener los 3 metodos aca y la lista de autos
-    //creacion de lista de autos
-    List<Auto> listaAutos = new ArrayList<Auto>();
-    
-    public void AltaAuto(Auto auto)
-    {
-        listaAutos.add(auto);
-    }
+	ArrayList<Auto> ListaAutos = new ArrayList<Auto>();
+	
+	public void AgregarAuto(Auto nuevoAuto)
+	{
+		ListaAutos.add(nuevoAuto);
+	
+	}
+	
+	public Auto BuscarAutosXPatente(String patente)
+	{
+		for(int i = 0 ; i < ListaAutos.size() ;i++)
+		{
+			if(ListaAutos.get(i).getPatente().equals(patente))
+			{
+				return ListaAutos.get(i);
+			}
+		
+		}
+		return null;
+	}
+	
+	public void EditarVelocidadAuto(int Velocidadnueva,String patente)
+	{
+		Auto auto = BuscarAutosXPatente(patente);
+		
+		if(auto != null)
+		{
+		auto.setVelocidad(Velocidadnueva);
+		}else
+		{
+			System.out.println("error");
+		}
+		
+		
+	}
+	public void Mostrar()
+	{
+		System.out.println("lista de autos :");
+		
+		for(int i = 0 ; i < ListaAutos.size() ; i++)
+		{
+			System.out.println( ListaAutos.get(i).getPatente()+"-" + ListaAutos.get(i).getVelocidad());
+		}
+		
+	}
 
-     public List<Auto> MostrarListaAutos()
-    {
-        return listaAutos;
-    }
-
-    public Auto BuscarAutoXPatente (String patente)
-    {
-         for(Auto auto : listaAutos)
-        {
-            if(auto.getPatente().equals(patente))
-            {
-               return auto;
-            }
-        }   
-
-        return null;
-    }
+	
 }

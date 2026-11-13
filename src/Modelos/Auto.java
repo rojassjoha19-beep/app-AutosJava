@@ -1,27 +1,30 @@
 package Modelos;
+
 public class Auto {
-    
-public String Patente;
-public double Velocidad ;
 
-public Auto(String Patente, double Velocidad){
-    this.Patente = Patente;
-    this.Velocidad = Velocidad;
-}
+	public String patente;
+	public int velocidad;
+	
+	public Auto(String patente, int velocidad) {
+		super();
+		this.patente = patente;
+		this.velocidad = velocidad;
+	}
 
-public String getPatente() {
-    return this.Patente;
-}
-public double getVelocidad() {
-    return this.Velocidad;
-}
+	public String getPatente() {
+		return patente;
+	}
 
+	public void setPatente(String patente) {
+		this.patente = patente;
+	}
 
-public void setPatente(String Patente) {
-    this.Patente = Patente;
-}
-public void  setVelocidad(double Velocidad) {
-    this.Velocidad = Velocidad;
-}
-}
+	public int getVelocidad() {
+		return velocidad;
+	}
 
+	public void setVelocidad(int velocidad) {
+		this.velocidad = velocidad;
+	}
+	
+}
