@@ -21,7 +21,7 @@ public class MensajeParser {
 		}
 		
 		return new Mensaje(recurso, accion, parametros);
-		
+	//usar builder? 	
 		
 	}
 
