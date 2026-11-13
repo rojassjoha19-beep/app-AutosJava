@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete resource &apos;App-Autos-Java&apos;" deleteContents="false" description="Delete resource &apos;App-Autos-Java&apos;" element1="/App-Autos-Java" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1794575322359"/>
-</session>
