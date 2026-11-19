@@ -1,0 +1,6 @@
+/bin/
+*.class
+.settings/
+.classpath
+.project
+>>>>>>> 00f5a23fad03a08e26f2f7151d36889a846e3525
