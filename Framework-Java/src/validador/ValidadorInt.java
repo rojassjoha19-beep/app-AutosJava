@@ -15,7 +15,7 @@ public class ValidadorInt {
 
         if (valor == null ) {
             throw new ValidadorException(
-                    "El valor no puede estar vacío"
+                    "El valor no puede estar vacio"
             );
         }
 
@@ -23,7 +23,7 @@ public class ValidadorInt {
             Integer.parseInt(valor);
         } catch (NumberFormatException error) {
             throw new ValidadorException(
-                    "El valor debe ser un número entero"
+                    "El valor debe ser un numero entero"
             );
         }
 
@@ -40,7 +40,7 @@ public class ValidadorInt {
 
         if (numero < minimo || numero > maximo) {
             throw new ValidadorException(
-                    "El número debe estar entre "
+                    "El numero debe estar entre "
                     + minimo + " y " + maximo
             );
         }
