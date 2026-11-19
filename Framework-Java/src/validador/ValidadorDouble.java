@@ -15,7 +15,7 @@ public class ValidadorDouble {
 
         if (valor == null ) {
             throw new ValidadorException(
-                    "El valor no puede estar vacío"
+                    "El valor no puede estar vacio"
             );
         }
 
@@ -23,7 +23,7 @@ public class ValidadorDouble {
             Double.parseDouble(valor);
         } catch (NumberFormatException e) {
             throw new ValidadorException(
-                    "El valor debe ser un número decimal"
+                    "El valor debe ser un numero decimal"
             );
         }
 
@@ -40,7 +40,7 @@ public class ValidadorDouble {
 
         if (numero < minimo || numero > maximo) {
             throw new ValidadorException(
-                    "El número debe estar entre "
+                    "El numero debe estar entre "
                     + minimo + " y " + maximo
             );
         }

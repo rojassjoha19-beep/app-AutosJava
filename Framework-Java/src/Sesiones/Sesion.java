@@ -1,6 +1,7 @@
 package Sesiones;
-import Comunicadores.ComunicadorConsola;
+import Comunicadores.ComunicadorConsola;	
 import Controladores.Controlador;
+import Controladores.ControllerLocator;
 import Parser.Mensaje;
 import Parser.MensajeParser;
 
@@ -8,15 +9,15 @@ import Parser.MensajeParser;
 public class Sesion implements Runnable{
 
 	private ComunicadorConsola comunicador ;
-	private Controlador controlador;
+	private ControllerLocator locator;
 	private MensajeParser parser;
 	
 	
 	
-	public Sesion(ComunicadorConsola comunicador,Controlador controlador, MensajeParser parser) {
+	public Sesion(ComunicadorConsola comunicador,ControllerLocator locator, MensajeParser parser) {
 		super();
 		this.comunicador = comunicador;
-		this.controlador = controlador;
+		this.locator = locator;
 		this.parser = parser;
 	}
 
@@ -31,11 +32,18 @@ public class Sesion implements Runnable{
 			
 			Mensaje mensajee = parser.parse(mensaje);//lo parsea
 			
-			controlador.ProcesarMensaje(mensajee);//lo envia a controler   
-		}catch(Exception e)
-		{
-			System.out.println("Error");
-		}
+		    Controlador controlador = locator.obtener(mensajee.getRecurso());
+		    if (controlador == null) {
+                comunicador.Envia("Error: recurso no encontrado -> " + mensajee.getRecurso());
+            } else {
+                String respuesta = controlador.ProcesarMensaje(mensajee);
+                comunicador.Envia(respuesta);
+            }
+        } catch (Exception e) {
+            comunicador.Envia("Error: mensaje inválido (" + e.getMessage() + ")");
+        }
+			
+		
 		}
 	}
 	
