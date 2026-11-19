@@ -21,9 +21,49 @@ public class MensajeParser {
 		}
 		
 		return new Mensaje(recurso, accion, parametros);
-	//usar builder? 	
+	//usar builder
+		//metodo build 
+/*		
+		private String tipo;
+
+
+		private List<Integer> parametros;
+
+		public OperacionBuilder() {
 		
-	}
+			
+			parametros = new ArrayList<Integer>();
+			
+		}
+
+
+		public OperacionBuilder setOperacion(String tipoOperacion) {
+			this.tipo = tipoOperacion;
+			return this;
+		}
+		
+		public OperacionBuilder addParametro(int parametro) {
+			this.parametros.add(parametro);
+			return this;
+		}
+		
+		Metodo build devuelve Objeto operacion , tiene una lista y debe convertir a array
+		
+		public Operacion build() {
+			int tam = parametros.size();
+			 int[] vectParametros = new int [tam];
+			 int i= 0;
+			 for (int parametrosPasar : this.parametros) {
+				 vectParametros [i] =parametrosPasar;
+				 i++;
+			 }
+			 
+			 return new Operacion (this.tipo, vectParametros);
+		
+		}
+	
+		
+	}*/
 
 
 }
