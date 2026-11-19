@@ -8,8 +8,8 @@ public class ProtocoloParser {
 	
 	//recurso=modelo!accion=metodo!parametro=x/parametro2= x/parametro3=x
 	
-	/*- Definir un protocolo (con qué formato van a 
-		//	llegar los mensajes para determinar qué va a hacer la aplicación).
+	/*- Definir un protocolo (con que formato van a 
+		//	llegar los mensajes para determinar que va a hacer la aplicacion).
 	
 	*/
 	
