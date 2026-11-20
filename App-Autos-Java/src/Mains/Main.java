@@ -15,6 +15,7 @@ public class Main {
 
         ControllerLocator locator = new ControllerLocator();
         locator.registrar("auto", controladorA);
+        
 
         MensajeParser mensaje = new MensajeParser();
         ComunicadorConsola comunicador = new ComunicadorConsola();

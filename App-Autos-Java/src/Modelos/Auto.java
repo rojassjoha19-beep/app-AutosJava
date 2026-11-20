@@ -2,9 +2,14 @@ package Modelos;
 
 public class Auto {
 
-	public String patente;
-	public int velocidad;
+	private String patente;
+	private int velocidad;
+	private String nombreAlta; //quien dio de alta el auto
 	
+	public String getNombreAlta() {
+		return nombreAlta;
+	}
+
 	public Auto(String patente, int velocidad) {
 		super();
 		this.patente = patente;
