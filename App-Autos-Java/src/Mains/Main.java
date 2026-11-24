@@ -20,7 +20,7 @@ public class Main {
     	 ControllerLocator locator = new ControllerLocator();
     	  
          ContenedorAutos contenedor = new ContenedorAutos();
-         
+
     	 AutoControlador controladorA = new AutoControlador(contenedor);
          locator.registrar("auto", controladorA);
        
@@ -32,9 +32,18 @@ public class Main {
     			 .setLocator(locator)
     			 .build();
     		
+    	 
+    	// StringBuilder sb = new StringBuilder();
+    	 
+    	// sb.append("ho");
+    	// sb.append("la");
+    	// String s = sb.toString();
+    	 //o con factory 
         
 
-       
-        sesionInicial.run();
+       //main -> builder app -> buildersesion, builder locator .... crear sesion factory para crear controladores . 
+      //agregar pregunta con factory 
+    	 
+    	 sesionInicial.run();
     }
 }
